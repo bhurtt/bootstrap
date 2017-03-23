@@ -68,7 +68,6 @@
     this.$element
       .removeClass('collapse')
       .addClass('collapsing')[dimension](0)
-      .attr('aria-expanded', true)
 
     this.$trigger
       .removeClass('collapsed')
@@ -108,7 +107,6 @@
     this.$element
       .addClass('collapsing')
       .removeClass('collapse in')
-      .attr('aria-expanded', false)
 
     this.$trigger
       .addClass('collapsed')
@@ -149,7 +147,6 @@
   Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
     var isOpen = $element.hasClass('in')
 
-    $element.attr('aria-expanded', isOpen)
     $trigger
       .toggleClass('collapsed', !isOpen)
       .attr('aria-expanded', isOpen)
